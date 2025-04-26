@@ -13,13 +13,16 @@ body {
 }
 
 .items {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-gap: 20px;
   width: 600px;
   height: 600px;
   border: 4px dashed white;
-  position: relative; /* Keep relative, remove display: grid */
+  position: relative;
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
-  overflow: hidden; /* Prevent items from escaping visually */
+  overflow: hidden; /* important to prevent dragging out */
 }
 
 .item {
@@ -32,7 +35,7 @@ body {
   align-items: center;
   font-weight: bold;
   cursor: grab;
-  position: absolute; /* Important */
+  position: absolute;
   user-select: none;
   transition: box-shadow 0.2s;
 }
