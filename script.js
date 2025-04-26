@@ -38,20 +38,4 @@ function onMouseMove(e) {
   let newLeft = e.clientX - containerRect.left - offsetX;
   let newTop = e.clientY - containerRect.top - offsetY;
 
-  // Enforce boundary limits
-  newLeft = Math.max(0, Math.min(newLeft, container.clientWidth - selected.clientWidth));
-  newTop = Math.max(0, Math.min(newTop, container.clientHeight - selected.clientHeight));
-
-  selected.style.left = `${newLeft}px`;
-  selected.style.top = `${newTop}px`;
-}
-
-function onMouseUp() {
-  if (selected) {
-    selected.classList.remove('dragging');
-    selected = null;
-  }
-
-  document.removeEventListener('mousemove', onMouseMove);
-  document.removeEventListener('mouseup', onMouseUp);
-}
+  // Enforce boundary
