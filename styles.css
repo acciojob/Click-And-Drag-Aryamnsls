@@ -6,19 +6,20 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  background: #222;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222;
-  font-family: sans-serif;
 }
 
 .items {
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   width: 80%;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
   cursor: grab;
 }
 
@@ -28,12 +29,11 @@ body {
   margin-right: 20px;
   background: #3498db;
   color: white;
-  font-weight: bold;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  align-items: center;
   font-size: 24px;
   border-radius: 10px;
   user-select: none;
+  flex-shrink: 0;
 }
